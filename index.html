@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/resources/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css" />
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <section>
+      <div class="inputs">
+        <div class="entry">
+          <h3>DAY</h3>
+
+          <input type="text" placeholder="DD" id="dayinp" />
+
+          <p id="dayerror"></p>
+        </div>
+        <div class="entry">
+          <h3>MONTH</h3>
+
+          <input type="text" id="monthinp" placeholder="MM"/>
+
+          <p id="montherror"></p>
+        </div>
+        <div class="entry">
+          <h3>YEAR</h3>
+
+          <input type="text" placeholder="YYYY" id="yearinp" />
+
+          <p id="yearerror"></p>
+        </div>
+
+        <button id="go" type="button">Get Age</button>
+      </div>
+
+      <hr />
+
+      <div class="just">
+        <img src="/resources/images/icon-arrow.svg" alt="">
+      </div>
+
+      <div class="outputs">
+        <div>
+          <h2 id="years">38</h2>
+          <h2> years</h2>
+          <br />
+        </div>
+
+        <div>
+          <h2 id="months">3</h2>
+          <h2>months</h2>
+          <br />
+        </div>
+
+        <div>
+          <h2 id="days">26</h2>
+          <h2>days</h2> <br>
+        </div>
+      </div>
+    </section>
+    <script src="/script.js"></script>
+  </body>
+</html>
