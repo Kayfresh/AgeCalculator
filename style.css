@@ -15,11 +15,20 @@
 
 body {
     margin: 0;
-    padding: 35px 0;
+    padding: 30px 0;
     background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+h1 {
+    font-family: Poppins-bold;
+    color: #864dfe;
+    font-size: 300%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 section {
@@ -138,6 +147,96 @@ hr {
     color: #8059d0;
 }
 
+@media screen and (max-width: 1024px) {
+    section {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    section {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 480px) {
+    section {
+        width: 80%;
+        padding: 50px 25px;
+        margin: 20px 0;
+        align-self: center;
+        margin-bottom: 10px;
+        border-bottom-right-radius: 100px;
+    }
+
+    h1 {
+        margin-bottom: 0px;
+        font-size: 200%;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+    .entry {
+        width: 100%;
+    }
+
+    .entry input {
+        width: 70%;
+        gap: 1%;
+        font-size: 22px;
+        height: 45px;
+    }
+
+    .just {
+        align-self: center;
+        align-items: center;
+    }
+
+    hr {
+        margin: 45px 0;
+    }
+
+    .just img {
+        width: 35%;
+        margin-top: -120%;
+        padding: 15px;
+    }
+
+    .outputs div {
+        line-height: 60px;
+    }
+
+    .outputs {
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+
+    .outputs div h2 {
+        font-size: 50px;
+    }
+
+    #days, #months, #years {
+        font-size: 50px;
+    }
     
+}
+
+@media screen and (max-width: 320px) {
+    section {
+        margin-top: 10px;
+    }
+
+    .outputs div h2 {
+        font-size: 45px;
+    }
+
+    #days, #months, #years {
+        font-size: 45px;
+    }    
+
+    .attribution {
+        font-size: 12px;
+    }
 }

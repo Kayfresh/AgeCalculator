@@ -33,6 +33,10 @@ const calculations = () => {
   head[1].style.color = "#6c6c6c";
   head[2].style.color = "#6c6c6c";
 
+  dayIn.style.borderColor = "";
+  monthIn.style.borderColor = "";
+  yearIn.style.borderColor = "";
+
   const notYet = () => {
     if (
       lastMonth === 4 ||
@@ -60,10 +64,12 @@ const calculations = () => {
     if (isNaN(dayValue)) {
         dayError.textContent = "Input a Number";
         head[0].style.color = "red";
+        dayIn.style.borderColor = "red";
         return;
       } else if (dayValue < 1 || dayValue > 31) {
         dayError.textContent = "Please enter a valid day (1-31)";
         head[0].style.color = "red";
+        dayIn.style.borderColor = "red";
         return;
       } else if (
         monthValue === 4 ||
@@ -74,6 +80,7 @@ const calculations = () => {
         if (dayValue > 30) {
           dayError.textContent = "Please enter a valid day (1-30)";
           head[0].style.color = "red";
+          dayIn.style.borderColor = "red";
           return;
         }
       } else if (monthValue === 2) {
@@ -81,12 +88,14 @@ const calculations = () => {
           if (dayValue > 29) {
             dayError.textContent = "Please enter a valid day (1-29)";
             head[0].style.color = "red";
+            dayIn.style.borderColor = "red";
             return;
           }
         } else {
           if (dayValue > 28) {
             dayError.textContent = "Please enter a valid day (1-28)";
             head[0].style.color = "red";
+            dayIn.style.borderColor = "red";
             return;
           }
         }
@@ -96,10 +105,12 @@ const calculations = () => {
   if (isNaN(monthValue)) {
     monthError.textContent = "Input a Number";
     head[1].style.color = "red";
+    monthIn.style.borderColor = "red";
     return;
   } else if (monthValue < 1 || monthValue > 12) {
     monthError.textContent = "Please enter a valid month (1-12)";
     head[1].style.color = "red";
+    monthIn.style.borderColor = "red";
     return;
   } else {
     if (monthValue > todayMonth) {
@@ -148,14 +159,17 @@ const calculations = () => {
   if (isNaN(yearValue)) {
     yearError.textContent = "Input a Number";
     head[2].style.color = "red";
+    yearIn.style.borderColor = "red";
     return;
   } else if (yearValue > todayYear) {
     yearError.textContent = "Year cannot be in the future";
     head[2].style.color = "red";
+    yearIn.style.borderColor = "red";
     return;
   } else if (yearValue < 1900) {
     yearError.textContent = "Minimum year is 1900";
     head[2].style.color = "red";
+    yearIn.style.borderColor = "red";
     return;
   } else if (yearValue == todayYear) {
     if (monthValue > todayMonth) {
